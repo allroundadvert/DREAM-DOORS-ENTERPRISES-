@@ -16,31 +16,41 @@ color:#f5d76e;
 
 /* HEADER IMAGE */
 
-.header{
-width:100%;
-height:auto;
-}
-
 .header img{
 width:100%;
 height:auto;
 display:block;
 }
 
-/* COMPANY TITLE */
+/* MOVING IMAGES */
+
+.slider{
+display:flex;
+overflow:hidden;
+height:220px;
+}
+
+.slide-track{
+display:flex;
+width:200%;
+animation:scroll 10s linear infinite;
+}
+
+.slide-track img{
+width:50%;
+object-fit:cover;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+/* COMPANY */
 
 .company{
 text-align:center;
-padding:20px;
-}
-
-.company h1{
-margin:0;
-font-size:32px;
-}
-
-.company p{
-font-size:18px;
+padding:10px;
 }
 
 /* CONTACT BUTTONS */
@@ -61,6 +71,20 @@ font-weight:bold;
 border-radius:6px;
 }
 
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+padding:10px;
+}
+
+.gallery img{
+width:100%;
+border-radius:6px;
+}
+
 /* FORM */
 
 .form-section{
@@ -72,15 +96,13 @@ margin:auto;
 label{
 display:block;
 margin-top:15px;
-font-weight:bold;
 }
 
-input, select, textarea{
+input,select,textarea{
 width:100%;
 padding:10px;
-margin-top:5px;
-border:none;
 border-radius:4px;
+border:none;
 }
 
 .submit-btn{
@@ -93,18 +115,12 @@ font-weight:bold;
 cursor:pointer;
 }
 
-/* ADDRESS */
-
-.address{
-text-align:center;
-padding:20px;
-}
-
 /* MAP */
 
 .map{
 width:100%;
 height:400px;
+margin-top:20px;
 }
 
 </style>
@@ -118,14 +134,30 @@ height:400px;
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/7f20d30a06813469c10eeb6dcea416025f4a7dc4/Screenshot_20260306-110134.jpg">
 </div>
 
-<!-- COMPANY DETAILS -->
+<!-- MOVING IMAGES -->
+
+<div class="slider">
+<div class="slide-track">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095343.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095525.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095621.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250510-160418.jpg">
+
+</div>
+</div>
+
+<!-- COMPANY -->
 
 <div class="company">
 
 <h1>DREAM DOORS ENTERPRISES</h1>
 
 <p>
-Importers and Exporters of Quality Doors of all kinds and Durable Stainless Handrails such as Security Doors, Patio Doors, Stainless, Flush Doors and Glass Doors.
+Importers and Exporters of Quality Doors and Durable Stainless Handrails including Security Doors, Patio Doors, Flush Doors and Glass Doors.
 </p>
 
 </div>
@@ -134,11 +166,37 @@ Importers and Exporters of Quality Doors of all kinds and Durable Stainless Hand
 
 <div class="buttons">
 
-<a href="tel:09163132020">Call Us</a>
+<a href="tel:09163132020">Call</a>
 
 <a href="#" onclick="sendToWhatsapp()">WhatsApp</a>
 
 <a href="mailto:Uchennawnafor84@gmil.com">Email</a>
+
+</div>
+
+<!-- PRODUCT GALLERY -->
+
+<div class="gallery">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250806-111147.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250806-111156.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250807-133722.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250807-133816.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250807-133852.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250807-134012.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250807-134047.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250811-124359.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20251106-191310.jpg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20251106-191336.jpg">
 
 </div>
 
@@ -185,34 +243,11 @@ Importers and Exporters of Quality Doors of all kinds and Durable Stainless Hand
 
 </div>
 
-<!-- ADDRESS -->
-
-<div class="address">
-
-<h3>Head Office</h3>
-
-<p>
-Shop 69 & 76 Peace Plaza  
-Ezenei Junction / Bonsac Junction  
-Asaba, Delta State
-</p>
-
-<h3>Branch Office</h3>
-
-<p>
-CY Plaza Shop 148  
-Obonike Obosi Building Materials  
-Onitsha, Anambra State
-</p>
-
-</div>
-
 <!-- MAP -->
 
 <iframe class="map"
 src="https://maps.google.com/maps?q=Asaba%20Delta%20State&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
-
 
 <script>
 
@@ -227,15 +262,13 @@ var payment=document.getElementById("payment").value;
 var type=document.getElementById("type").value;
 
 var message="Hello DREAM DOORS ENTERPRISES,%0A%0A";
-message+="I would like to make an enquiry:%0A%0A";
 message+="Customer Name: "+name+"%0A";
 message+="Phone: "+phone+"%0A";
-message+="Service Needed: "+service+"%0A";
+message+="Service: "+service+"%0A";
 message+="Specifications: "+specs+"%0A";
-message+="Bring to Site: "+site+"%0A";
+message+="Bring To Site: "+site+"%0A";
 message+="Payment Type: "+payment+"%0A";
-message+="Customer Type: "+type+"%0A%0A";
-message+="Please I need more information.";
+message+="Customer Type: "+type;
 
 window.open("https://wa.me/2347032139191?text="+message);
 
