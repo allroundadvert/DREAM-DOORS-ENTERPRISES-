@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DREAM DOORS ENTERPRISES</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DREAM DOORS ENTERPRISES</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:#000;
-color:#f5d76e;
+font-family:Arial, sans-serif;
+background:black;
+color:gold;
 }
 
 /* HEADER IMAGE */
@@ -22,105 +23,95 @@ height:auto;
 display:block;
 }
 
+/* TEXT AREA */
+
+.text{
+padding:15px;
+text-align:center;
+}
+
 /* MOVING IMAGES */
 
-.slider{
+.moving{
 display:flex;
+justify-content:space-between;
 overflow:hidden;
-height:220px;
+margin:5px;
 }
 
-.slide-track{
-display:flex;
-width:200%;
-animation:scroll 10s linear infinite;
-}
-
-.slide-track img{
-width:50%;
+.moving img{
+width:48%;
+height:180px;
 object-fit:cover;
-}
-
-@keyframes scroll{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
-}
-
-/* COMPANY */
-
-.company{
-text-align:center;
-padding:10px;
-}
-
-/* CONTACT BUTTONS */
-
-.buttons{
-text-align:center;
-margin:20px;
-}
-
-.buttons a{
-display:inline-block;
-padding:12px 25px;
-margin:10px;
-background:#f5d76e;
-color:#000;
-text-decoration:none;
-font-weight:bold;
 border-radius:6px;
+animation:move 2s infinite alternate;
 }
 
-/* GALLERY */
+@keyframes move{
+from{transform:translateX(-10px)}
+to{transform:translateX(10px)}
+}
+
+/* IMAGE GRID */
 
 .gallery{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:10px;
-padding:10px;
+gap:8px;
+padding:8px;
 }
 
 .gallery img{
 width:100%;
+height:220px;
+object-fit:cover;
 border-radius:6px;
 }
 
 /* FORM */
 
-.form-section{
-padding:20px;
-max-width:700px;
-margin:auto;
-}
-
-label{
-display:block;
-margin-top:15px;
+form{
+padding:15px;
 }
 
 input,select,textarea{
 width:100%;
 padding:10px;
-border-radius:4px;
+margin-top:8px;
+margin-bottom:10px;
 border:none;
+border-radius:5px;
 }
 
-.submit-btn{
-margin-top:20px;
-padding:15px;
-width:100%;
-background:#f5d76e;
-border:none;
+/* BUTTONS */
+
+.btn{
+display:block;
+text-align:center;
+background:gold;
+color:black;
+padding:12px;
+margin-top:10px;
+text-decoration:none;
+border-radius:5px;
 font-weight:bold;
-cursor:pointer;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
 }
 
 /* MAP */
 
 .map{
+padding:10px;
+}
+
+.map iframe{
 width:100%;
-height:400px;
-margin-top:20px;
+height:250px;
+border:0;
 }
 
 </style>
@@ -128,16 +119,43 @@ margin-top:20px;
 
 <body>
 
-<!-- TOP IMAGE -->
+<!-- HEADER -->
 
 <div class="header">
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/7f20d30a06813469c10eeb6dcea416025f4a7dc4/Screenshot_20260306-110134.jpg">
 </div>
 
+<div class="text">
+
+<h2>DREAM DOORS ENTERPRISES</h2>
+
+<p>
+Importers and exporters of quality doors of all kinds and durable stainless handrails such as security doors, patio doors, stainless handrails, flush doors and glass doors.
+</p>
+
+<p>
+Address: Shop 69 & 76 Peace Plaza Ezenei Junction Bonsac Junction, Asaba Delta State.
+</p>
+
+<p>
+Branch Office: CY Plaza Shop 148 Obonike Obosi Building Materials, Onitsha Anambra State.
+</p>
+
+</div>
+
 <!-- MOVING IMAGES -->
 
-<div class="slider">
-<div class="slide-track">
+<div class="moving">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/images%20(35).jpeg">
+
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20251106-191432.jpg">
+
+</div>
+
+<!-- IMAGE GALLERY -->
+
+<div class="gallery">
 
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095343.jpg">
 
@@ -146,37 +164,6 @@ margin-top:20px;
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095621.jpg">
 
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250510-160418.jpg">
-
-</div>
-</div>
-
-<!-- COMPANY -->
-
-<div class="company">
-
-<h1>DREAM DOORS ENTERPRISES</h1>
-
-<p>
-Importers and Exporters of Quality Doors and Durable Stainless Handrails including Security Doors, Patio Doors, Flush Doors and Glass Doors.
-</p>
-
-</div>
-
-<!-- CONTACT BUTTONS -->
-
-<div class="buttons">
-
-<a href="tel:09163132020">Call</a>
-
-<a href="#" onclick="sendToWhatsapp()">WhatsApp</a>
-
-<a href="mailto:Uchennawnafor84@gmil.com">Email</a>
-
-</div>
-
-<!-- PRODUCT GALLERY -->
-
-<div class="gallery">
 
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250806-111147.jpg">
 
@@ -198,77 +185,87 @@ Importers and Exporters of Quality Doors and Durable Stainless Handrails includi
 
 <img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20251106-191336.jpg">
 
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/1724fbb80ac9b8cf07a170253d8c1212244fd14d/Screenshot_20250508-095423.jpg">
+
 </div>
 
-<!-- CUSTOMER FORM -->
+<!-- FORM -->
 
-<div class="form-section">
+<form id="orderForm">
 
-<label>Customer Name</label>
-<input type="text" id="name">
+<input type="text" id="name" placeholder="Customer Name" required>
 
-<label>Customer Phone Number</label>
-<input type="text" id="phone">
+<input type="tel" id="phone" placeholder="Customer Phone Number" required>
 
-<label>Service Needed</label>
 <select id="service">
+
+<option value="">Select Service</option>
 <option>Security Doors</option>
 <option>Stainless Handrails</option>
 <option>Flush Doors</option>
 <option>Patio Doors</option>
+
 </select>
 
-<label>Specifications / More Information</label>
-<textarea id="specs"></textarea>
+<textarea id="spec" placeholder="Specifications or More Information"></textarea>
 
-<label>Bring to Site?</label>
-<select id="site">
-<option>Yes</option>
-<option>No</option>
+<select id="delivery">
+
+<option>Bring To Site</option>
+<option>Customer Pickup</option>
+
 </select>
 
-<label>Payment Type</label>
 <select id="payment">
+
 <option>Full Payment</option>
 <option>Installment Payment</option>
+
 </select>
 
-<label>Customer Type</label>
-<select id="type">
+<select id="customer">
+
 <option>New Customer</option>
 <option>Old Customer</option>
+
 </select>
 
-<button class="submit-btn" onclick="sendToWhatsapp()">Submit Request</button>
+<a class="btn whatsapp" onclick="sendWhatsApp()">Submit Order On WhatsApp</a>
 
-</div>
+</form>
+
+<!-- CALL BUTTON -->
+
+<a class="btn" href="tel:09163132020">Call 09163132020</a>
 
 <!-- MAP -->
 
-<iframe class="map"
-src="https://maps.google.com/maps?q=Asaba%20Delta%20State&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<div class="map">
+
+<iframe src="https://maps.google.com/maps?q=Ezenei%20junction%20Asaba&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
 
 <script>
 
-function sendToWhatsapp(){
+function sendWhatsApp(){
 
 var name=document.getElementById("name").value;
 var phone=document.getElementById("phone").value;
 var service=document.getElementById("service").value;
-var specs=document.getElementById("specs").value;
-var site=document.getElementById("site").value;
+var spec=document.getElementById("spec").value;
+var delivery=document.getElementById("delivery").value;
 var payment=document.getElementById("payment").value;
-var type=document.getElementById("type").value;
+var customer=document.getElementById("customer").value;
 
-var message="Hello DREAM DOORS ENTERPRISES,%0A%0A";
-message+="Customer Name: "+name+"%0A";
-message+="Phone: "+phone+"%0A";
-message+="Service: "+service+"%0A";
-message+="Specifications: "+specs+"%0A";
-message+="Bring To Site: "+site+"%0A";
-message+="Payment Type: "+payment+"%0A";
-message+="Customer Type: "+type;
+var message="Hello DREAM DOORS ENTERPRISES,%0A%0A"
++"Customer Name: "+name+"%0A"
++"Phone: "+phone+"%0A"
++"Service Needed: "+service+"%0A"
++"Specifications: "+spec+"%0A"
++"Delivery: "+delivery+"%0A"
++"Payment: "+payment+"%0A"
++"Customer Type: "+customer;
 
 window.open("https://wa.me/2347032139191?text="+message);
 
