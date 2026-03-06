@@ -2,60 +2,71 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>DREAM DOORS ENTERPRISES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#064e3b;
-color:white;
+font-family:Arial;
+background:#000;
+color:#f5d76e;
 }
 
-/* HEADER */
+/* HEADER IMAGE */
 
-header{
-background:#065f46;
-padding:25px;
+.header{
+width:100%;
+height:auto;
+}
+
+.header img{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* COMPANY TITLE */
+
+.company{
 text-align:center;
-border-bottom:4px solid yellow;
-}
-
-header h1{
-margin:0;
-color:yellow;
-font-size:30px;
-}
-
-header p{
-margin-top:10px;
-font-size:16px;
-}
-
-/* ADDRESS */
-
-.address{
 padding:20px;
+}
+
+.company h1{
+margin:0;
+font-size:32px;
+}
+
+.company p{
+font-size:18px;
+}
+
+/* CONTACT BUTTONS */
+
+.buttons{
 text-align:center;
-background:#022c22;
+margin:20px;
+}
+
+.buttons a{
+display:inline-block;
+padding:12px 25px;
+margin:10px;
+background:#f5d76e;
+color:#000;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
 }
 
 /* FORM */
 
 .form-section{
-max-width:850px;
-margin:40px auto;
-background:#065f46;
-padding:30px;
-border-radius:8px;
-}
-
-.form-section h2{
-text-align:center;
-color:yellow;
+padding:20px;
+max-width:700px;
+margin:auto;
 }
 
 label{
@@ -64,124 +75,84 @@ margin-top:15px;
 font-weight:bold;
 }
 
-input,select,textarea{
+input, select, textarea{
 width:100%;
-padding:12px;
-margin-top:6px;
+padding:10px;
+margin-top:5px;
 border:none;
 border-radius:4px;
 }
 
-textarea{
-height:120px;
-}
-
-button{
+.submit-btn{
 margin-top:20px;
+padding:15px;
 width:100%;
-padding:14px;
-background:yellow;
+background:#f5d76e;
 border:none;
-font-size:16px;
 font-weight:bold;
 cursor:pointer;
+}
+
+/* ADDRESS */
+
+.address{
+text-align:center;
+padding:20px;
 }
 
 /* MAP */
 
 .map{
 width:100%;
-height:350px;
-margin-top:40px;
-}
-
-/* FLOAT BUTTONS */
-
-.whatsapp{
-position:fixed;
-right:15px;
-bottom:160px;
-background:#25d366;
-color:white;
-padding:14px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.call{
-position:fixed;
-right:15px;
-bottom:110px;
-background:#2563eb;
-color:white;
-padding:14px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.email{
-position:fixed;
-right:15px;
-bottom:60px;
-background:#f59e0b;
-color:white;
-padding:14px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#022c22;
-margin-top:40px;
+height:400px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<!-- TOP IMAGE -->
+
+<div class="header">
+<img src="https://raw.githubusercontent.com/allroundadvert/DREAM-DOORS-ENTERPRISES-/7f20d30a06813469c10eeb6dcea416025f4a7dc4/Screenshot_20260306-110134.jpg">
+</div>
+
+<!-- COMPANY DETAILS -->
+
+<div class="company">
 
 <h1>DREAM DOORS ENTERPRISES</h1>
 
 <p>
-Importers and exporters of quality doors of all kinds and durable stainless handrails.
-Such as security doors, patio doors, stainless doors, flush doors and glass doors.
-</p>
-
-</header>
-
-<div class="address">
-
-<p>
-Address: Shop 69 & 76 Peace Plaza, Ezenei Junction Bonsac Junction, Asaba Delta State.
-</p>
-
-<p>
-Branch Office: CY Plaza Shop 148 Obonike Obosi Building Materials Market, Onitsha Anambra State.
+Importers and Exporters of Quality Doors of all kinds and Durable Stainless Handrails such as Security Doors, Patio Doors, Stainless, Flush Doors and Glass Doors.
 </p>
 
 </div>
 
+<!-- CONTACT BUTTONS -->
+
+<div class="buttons">
+
+<a href="tel:09163132020">Call Us</a>
+
+<a href="#" onclick="sendToWhatsapp()">WhatsApp</a>
+
+<a href="mailto:Uchennawnafor84@gmil.com">Email</a>
+
+</div>
+
+<!-- CUSTOMER FORM -->
+
 <div class="form-section">
 
-<h2>Customer Order / Booking Form</h2>
-
-<form onsubmit="sendToWhatsApp(); return false;">
-
 <label>Customer Name</label>
-<input type="text" id="name" required>
+<input type="text" id="name">
 
 <label>Customer Phone Number</label>
-<input type="text" id="phone" required>
+<input type="text" id="phone">
 
-<label>Select Service</label>
+<label>Service Needed</label>
 <select id="service">
 <option>Security Doors</option>
 <option>Stainless Handrails</option>
@@ -190,9 +161,9 @@ Branch Office: CY Plaza Shop 148 Obonike Obosi Building Materials Market, Onitsh
 </select>
 
 <label>Specifications / More Information</label>
-<textarea id="info"></textarea>
+<textarea id="specs"></textarea>
 
-<label>Bring To Site</label>
+<label>Bring to Site?</label>
 <select id="site">
 <option>Yes</option>
 <option>No</option>
@@ -205,57 +176,66 @@ Branch Office: CY Plaza Shop 148 Obonike Obosi Building Materials Market, Onitsh
 </select>
 
 <label>Customer Type</label>
-<select id="customer">
+<select id="type">
 <option>New Customer</option>
 <option>Old Customer</option>
 </select>
 
-<button type="submit">Submit Order</button>
-
-</form>
+<button class="submit-btn" onclick="sendToWhatsapp()">Submit Request</button>
 
 </div>
 
-<!-- GOOGLE MAP -->
+<!-- ADDRESS -->
+
+<div class="address">
+
+<h3>Head Office</h3>
+
+<p>
+Shop 69 & 76 Peace Plaza  
+Ezenei Junction / Bonsac Junction  
+Asaba, Delta State
+</p>
+
+<h3>Branch Office</h3>
+
+<p>
+CY Plaza Shop 148  
+Obonike Obosi Building Materials  
+Onitsha, Anambra State
+</p>
+
+</div>
+
+<!-- MAP -->
 
 <iframe class="map"
-src="https://maps.google.com/maps?q=Ezenei%20Junction%20Asaba&t=&z=13&ie=UTF8&iwloc=&output=embed">
+src="https://maps.google.com/maps?q=Asaba%20Delta%20State&t=&z=13&ie=UTF8&iwloc=&output=embed">
 </iframe>
 
-<footer>
-
-© DREAM DOORS ENTERPRISES
-
-</footer>
-
-<a class="whatsapp" href="https://wa.me/2347032139191">WhatsApp</a>
-
-<a class="call" href="tel:09163132020">Call</a>
-
-<a class="email" href="mailto:Uchennawnafor84@gmail.com">Email</a>
 
 <script>
 
-function sendToWhatsApp(){
+function sendToWhatsapp(){
 
 var name=document.getElementById("name").value;
 var phone=document.getElementById("phone").value;
 var service=document.getElementById("service").value;
-var info=document.getElementById("info").value;
+var specs=document.getElementById("specs").value;
 var site=document.getElementById("site").value;
 var payment=document.getElementById("payment").value;
-var customer=document.getElementById("customer").value;
+var type=document.getElementById("type").value;
 
 var message="Hello DREAM DOORS ENTERPRISES,%0A%0A";
-message+="I want to make an enquiry / order:%0A%0A";
+message+="I would like to make an enquiry:%0A%0A";
 message+="Customer Name: "+name+"%0A";
-message+="Phone Number: "+phone+"%0A";
+message+="Phone: "+phone+"%0A";
 message+="Service Needed: "+service+"%0A";
-message+="Specifications: "+info+"%0A";
-message+="Bring To Site: "+site+"%0A";
+message+="Specifications: "+specs+"%0A";
+message+="Bring to Site: "+site+"%0A";
 message+="Payment Type: "+payment+"%0A";
-message+="Customer Type: "+customer+"%0A%0A";
-message+="Please respond to me. Thank you.";
+message+="Customer Type: "+type+"%0A%0A";
+message+="Please I need more information.";
 
 window.open("https://wa.me/2347032139191?text="+message);
 
